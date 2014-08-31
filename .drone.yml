@@ -1,0 +1,8 @@
+image: centos:centos6
+script:
+  - yum install -y @buildsys-build yum-utils
+  - yum-builddep -y src/releng/redhawk.spec
+  - cd src
+  - ./reconf
+  - ./configure
+  - ./make
