@@ -1,0 +1,7 @@
+language: cpp
+before_install:
+- sudo apt-get update -qq
+install:
+- sudo apt-get install -y build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-regex-dev libboost-thread-dev libcos4-dev liblog4cxx10-dev libomnievents-dev libomniorb4-dev libxml2-utils omnievents omniidl omniidl-python omniorb omniorb-idl omniorb-nameserver openjdk-7-jdk python2.7-dev python-jinja2 python-numpy python-omniorb uuid-dev xsdcxx
+script:
+- cd src && ./reconf && ./configure && make && sudo make install
