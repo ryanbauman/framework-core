@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ryanbauman/redhawk.svg?branch=develop-2.0)](https://travis-ci.org/ryanbauman/redhawk)
+
 # REDHAWK Core Framework
 
 ## Description
