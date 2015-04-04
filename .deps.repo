@@ -1,0 +1,5 @@
+[redhawk-deps]
+name = REDHAWK Dependencies
+baseurl = http://yum.axiosengineering.com/redhawk/1.10.2/
+enabled = 1
+gpgcheck = 0
