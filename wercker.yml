@@ -1,0 +1,13 @@
+# use the default golang container from Docker Hub
+box: ryanbauman/redhawk-ubuntu-buildenv:14.04
+# The steps that will be executed in the build pipeline
+build:
+  steps:
+    # Build the project
+    - script:
+        name: build
+        code: |
+          cd src
+          ./reconf
+          ./configure
+          make
