@@ -36,6 +36,6 @@ COPY . /build
 WORKDIR /build
 VOLUME /build
 
-RUN ./build_src.sh && make install
+RUN ./build_src.sh && cd src && make install
 
 CMD ["/bin/bash", "-l"]
