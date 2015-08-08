@@ -31,3 +31,11 @@ RUN apt-get update -qq && \
                        xsdcxx && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+
+COPY . /build
+WORKDIR /build
+VOLUME /build
+
+RUN ./build_src.sh && make install
+
+CMD ["/bin/bash", "-l"]
