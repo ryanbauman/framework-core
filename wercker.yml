@@ -1,0 +1,18 @@
+box: ryanbauman/redhawk-ubuntu-buildenv:14.04
+# The steps that will be executed in the build pipeline
+build:
+  steps:
+    # Build the project
+    - script:
+        name: build
+        code: |
+          ./build_src.sh
+          cd src && make install
+  after-steps:
+    - script:
+      name: install ruby
+      code: |
+        apt-get install -y ruby
+    - wantedly/pretty-slack-notify@0.2.10:
+        webhook_url: $SLACK_WEBHOOK_URL
+        channel: ci

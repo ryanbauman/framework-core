@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ryanbauman/redhawk.svg?branch=develop-2.0)](https://travis-ci.org/ryanbauman/redhawk)
+[![wercker status](https://app.wercker.com/status/b1b6c689cf68bff5b19c011657f4cf1f/m "wercker status")](https://app.wercker.com/project/bykey/b1b6c689cf68bff5b19c011657f4cf1f)
 
 # REDHAWK Core Framework
 
