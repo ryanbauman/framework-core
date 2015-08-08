@@ -8,11 +8,19 @@ build:
         code: |
           ./build_src.sh
           cd src && make install
-  after-steps:
-    - script:
-      name: install ruby
-      code: |
-        apt-get install -y ruby
-    - wantedly/pretty-slack-notify@0.2.10:
-        webhook_url: $SLACK_WEBHOOK_URL
-        channel: ci
+#  after-steps:
+#    - script:
+#        name: install ruby
+#        code: |
+#          apt-get install -y ruby
+#    - wantedly/pretty-slack-notify@0.2.10:
+#        webhook_url: $SLACK_WEBHOOK_URL
+#        channel: ci
+deploy:
+  steps:
+    - internal/docker-push:
+        username: $USERNAME
+        password: $PASSWORD
+        repository: redhawkci/redhawk-ubuntu
+        tag: 14.04
+        registry: https://registry.hub.docker.com
